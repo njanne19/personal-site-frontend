@@ -1,0 +1,25 @@
+[
+    {
+        "title": "Publications", 
+        "items": [
+            {
+                "title": "Inverting the Design of Everyday Things: Affordances, Signifiers and Why Objects Should See and Robots Should Do", 
+                "authors": "Stanley Lewis, Tom Gao, Nick Janne, Odest Chadwicke Jenkins", 
+                "type": "Workshop", 
+                "venue": "CoRL", 
+                "date": "2023", 
+                "abstract": "Roboticists have long aspired to create robots capable of autonomously executing manipulation tasks using natural language instructions. However, integrating language into physical tasks remains a challenging research area. We propose a new conceptualization of this problem, akin to inverting the industrial design problem as explored by Don Norman. Humans rely on object signifiers, communicated via an object’s geometry or texture, to effectively map their actions to affordances. For instance, a horizontal crash bar on a door signal where to push. These inherent object signifiers suggest that manipulation should primarily depend on object appearance and observed object-object interactions. By conditioning manipulations on neural radiance field representations of relevant objects in the scene, we can subsequently establish object-centric way fields for desired object motion in a given task. This approach allows for a separation between the challenging language-driven task and the more well-understood motion-planning problem.",
+                "url": "https://neurl-rmw.github.io/"
+            }, 
+            {
+                "title": "Simplifying Aerial Manipulation Using Intentional Collisions", 
+                "authors": "Mark Nail, Nick Janne, Olivia Ma, Gabriel Arellano, Ella Atkins, R Brent Gillespie",
+                "type": "Conference", 
+                "venue": "ICRA",
+                "date": "2023",
+                "abstract": "Aerial manipulation describes a process that includes physical interaction between an unmanned aircraft system (UAS) and its environment. We aim to apply aerial manipulation to sample leaves and small branches from rain forest trees. Current approaches to aerial manipulation involve extended periods of UAS-environment interaction, during which forces and moments can lead to a loss in attitude or position control in underactuated multicopters. By adapting intelligent foot placement strategies found in dynamically stable hopping robots, this work proposes a strategy involving carefully managed intentional collisions between the UAS and its environment. We designed an attitude controller denoted a Velocity Matching controller that aligns a UAS-mounted pogo-stick foot with the center of mass velocity vector during collision approach to maximize UAS ability to recover a hover state after collision. We propose the use of a flight envelope involving altitude and horizontal speed states to assess recoverability prior to initiating each approach to collision. We identify this flight envelope from a simulation study built on a model of flight in Conventional Waypoint Following and Velocity Matching control modes as well as a model of collision response. Experimental flight testing evaluates the simulation-based envelope resulting in an actual envelope that is somewhat smaller but similarly shaped to the envelope identified in simulation.", 
+                "url": "https://ieeexplore.ieee.org/abstract/document/10161462"
+            }
+        ]
+    }
+]

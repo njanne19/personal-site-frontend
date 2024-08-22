@@ -3,6 +3,7 @@ import { Card, CardBody } from "@nextui-org/card";
 import { Link } from "@nextui-org/link"; 
 import { MdiLinkedin, MdiGithub, MdiYoutube, SimpleIconsOrcid, AcademiconsGoogleScholar } from "@/components/icons";
 import Resume from "@/components/resume";
+import Publications from "@/components/publications";
 
 export default function Home() {
   return (
@@ -47,13 +48,14 @@ export default function Home() {
           I'm a PhD student in the <Link href="#"> Department of Robotics </Link> at the University of Michigan. 
           I'm advised by Professors <Link href="#"> Brent Gillespie </Link> and <Link href="#"> Chad Jenkins </Link>. I graduated with my 
           B.S.E in Computer Engineering from the University of Michigan in 2023. My research interests are centered on bringing adaptation
-          and learning mechanisms to robots for task and motion planning.I'm particularily interested in raising the capability of robots to deal with uncertainty, so that 
+          and learning mechanisms to robots for task and motion planning. I'm particularily interested in raising the capability of robots to deal with uncertainty, so that 
           we may one day raise a robot fleet to construct permanent human habitats on the Moon and Mars. I worked as an intern at SpaceX from 2021-2023 on the Guidance, Navigation, and Control team for the Starship HLS program, 
           as well as the Starship RF engineering team. I've now started a small rocket organization of my own called <Link href="#"> Cow2k </Link>, where I'm working towards my High Powered Rocketry certifications with a group of friends and colleagues. 
         </p>
       </div>
     </div> 
     <div className="flex flex-col md:p-20">
+      <Publications />
       <Resume />
     </div>
     </div>

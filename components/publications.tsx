@@ -8,42 +8,25 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { MdiLocation } from "./icons";
 import { Button } from "@nextui-org/button";
 
-export type ResumeItemProps = { 
+export type PublicationItemProps = { 
     title: string; 
-    location?: string;
-    subtitle: string; 
-    dateStart: string; 
-    dateEnd: string; 
-    description: string;
+    authors: string; 
+    type: string; 
+    venue: string; 
+    date: string;
+    abstract: string; 
 }
 
-export type ResumeSectionProps = { 
+export type PublicationSectionProps = { 
     title: string; 
-    items: ResumeItemProps[];
+    items: PublicationItemProps[];
 }
 
 
-const ResumeSection: React.FC<ResumeSectionProps> = (props) => {
+const PublicationSection: React.FC<PublicationSectionProps> = (props) => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-    const [modalContent, setModalContent] = useState<ResumeItemProps>();
+    const [modalContent, setModalContent] = useState<PublicationItemProps>();
     const numElements = props.items.length;
-
-    let titleLabel; 
-    let subtitleLabel; 
-
-    if (props.title == "Education") {
-        titleLabel = "School";
-        subtitleLabel = "Degree";
-    } else if (props.title == "Experience") {
-        titleLabel = "Organization"; 
-        subtitleLabel = "Role";
-    } else if (props.title == "Teaching") {
-        titleLabel = "Course";
-        subtitleLabel = "Role";
-    } else {
-        titleLabel = "Title";
-        subtitleLabel = "Subtitle";
-    }
 
     return (
         <div className="mb-8">
@@ -52,8 +35,10 @@ const ResumeSection: React.FC<ResumeSectionProps> = (props) => {
             {/* <h2 className="text-2xl font-bold">{props.title}</h2> */}
             <TableHeader>
                 <TableColumn className="hidden sm:table-cell">Item</TableColumn>
-                <TableColumn>{titleLabel}</TableColumn>
-                <TableColumn>{subtitleLabel}</TableColumn>
+                <TableColumn>Title</TableColumn>
+                <TableColumn>Authors</TableColumn>
+                <TableColumn>Type</TableColumn>
+                <TableColumn>Venue</TableColumn>
                 <TableColumn>Date</TableColumn>
                 <TableColumn>Actions</TableColumn>
             </TableHeader>
@@ -66,43 +51,38 @@ const ResumeSection: React.FC<ResumeSectionProps> = (props) => {
                             </Chip>
                         </TableCell>
                         <TableCell className="text-xs sm:text-medium p-2 sm:p-1">
-                            {item.title} <br />
-                            {item.location && (
-                                    <Chip variant="bordered" size="sm">
-                                        <div className="flex flex-row items-center align-top">
-                                        <MdiLocation className="w-4 h-4" />
-                                        <p>
-                                        {item.location}
-                                        </p>
-                                        </div>
-                                    </Chip>
-                            )}
+                            {item.title}
                         </TableCell>
                         <TableCell className="text-xs sm:text-medium p-2 sm:p-1 align-top">
-                                {item.subtitle}
+                                {item.authors}
                         </TableCell>
                         <TableCell className="text-xs sm:text-medium p-2 sm:p-1 align-top">
-                            {item.dateStart} - {item.dateEnd}
+                            {item.type}
+                        </TableCell>
+                        <TableCell className="text-xs sm:text-medium p-2 sm:p-1 align-top">
+                            {item.venue}
+                        </TableCell>
+                        <TableCell className="text-xs sm:text-medium p-2 sm:p-1 align-top">
+                            {item.date}
                         </TableCell>
                         <TableCell className="text-xs sm:text-medium p-2 sm:p-1 align-top">
                             <Button radius="full" size="sm" onClick={() => {setModalContent(item); onOpen();}}>
                                 View
                             </Button>
-
                         </TableCell>
                     </TableRow>
                 ))}
             </TableBody>
         </Table>
         <>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Modal isOpen={isOpen} size={"xl"} onOpenChange={onOpenChange}>
                 <ModalContent>
                 {(onClose) => (
                     <>
                     <ModalHeader className="flex flex-col gap-1">{modalContent?.title}</ModalHeader>
                     <ModalBody>
                         <p>
-                        {modalContent?.description}
+                        {modalContent?.abstract}
                         </p>
                     </ModalBody>
                     <ModalFooter>
@@ -120,13 +100,13 @@ const ResumeSection: React.FC<ResumeSectionProps> = (props) => {
     )
 }
 
-const Resume: React.FC = () => {
-    const [resumeData, setResumeData] = useState<ResumeSectionProps[]>([]);
+const Publications: React.FC = () => {
+    const [resumeData, setResumeData] = useState<PublicationSectionProps[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('/data/resumeData.json');
-            const data: ResumeSectionProps[] = await response.json();
+            const response = await fetch('/data/pubData.json');
+            const data: PublicationSectionProps[] = await response.json();
             setResumeData(data);
         };
 
@@ -137,7 +117,7 @@ const Resume: React.FC = () => {
         <div className="flex flex-wrap justify-evenly">
             {resumeData.map((section, index) => (
                 <div key={index} className="w-full">
-                    <ResumeSection key={index} {...section} />
+                    <PublicationSection key={index} {...section} />
                 </div> 
                 
             ))}
@@ -145,4 +125,4 @@ const Resume: React.FC = () => {
     );
 };
 
-export default Resume;
+export default Publications;
