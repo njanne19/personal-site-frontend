@@ -1,0 +1,78 @@
+[
+    {
+        "title": "Experience",
+        "items": [
+            {
+                "title": "Space Exploration Technologies (SpaceX)",
+                "location": "Hawthorne, CA",
+                "subtitle": "Guidance, Navigation, and Control Intern",
+                "dateStart": "May 2023",
+                "dateEnd": "Aug 2023",
+                "description": "Developed full-stack radiometric deep-space navigation simulation and analysis package in python with integration to NASA's GMAT orbit propagator. Worked closely with GMAT team at NASA Goddard to integrate features and bugfixes. Conceptualized and presented on a novel approach to achieving low-uncertainty pose estimates using DNS radiometric infrastrucure."
+            },
+            {
+                "title": "University of Michigan Electric Boat (UMEB)",
+                "location": "Ann Arbor, MI",
+                "subtitle": "Guidance, Navigation, and Control Project Lead",
+                "dateStart": "Sep 2022",
+                "dateEnd": "May 2023",
+                "description": "Led a team of engineers in the development of a 6-Degree-of-Freedom physics simulation and analysis package for hydrofoiling catamaran, supporting hydrofoil actuation and control in loop."
+            },
+            {
+                "title": "Space Exploration Technologies (SpaceX)",
+                "location": "Hawthorne, CA", 
+                "subtitle": "RF Engineering Intern", 
+                "dateStart": "May 2022", 
+                "dateEnd": "Aug 2022",
+                "description": "Developed end-to-end 6-DOF microwave communications simulator to calculate dynamic link budgets and performance along rocket flight trajectories. Incorporated TDRS satellite ephemeris to expose available link performance during re-entry blackout conditions. Developed software tools to characterize signal blackout due to Rocket Plume Interference, as well as GPS and GLONASS multipath signal degradation."
+            }, 
+            {
+                "title": "Michigan Aeronautical Science Association (MASA)",
+                "location":"Ann Arbor, MI",
+                "subtitle": "Lead Avionics Engineer", 
+                "dateStart": "Sep 2019", 
+                "dateEnd": "Sep 2022", 
+                "description": "Constructed RF + GPS System design, implementation, and integration for a space-shot bipropellant liquid rocket. Developed in-house firmware stack for interfacing and packeting GPS + telemetry downlink. Developed and implemented a custom RF link budget for telemetry downlink and GPS tracking."
+            }, 
+            {
+                "title": "Space Exploration Technologies (SpaceX)", 
+                "location": "Hawthorne, CA",
+                "subtitle": "RF Engineering Intern", 
+                "dateStart": "May 2021",
+                "dateEnd": "Aug 2021",
+                "description": "Designed, simulated, and characterized multiple patch antennas (L, S Band) for orbital class launch vehicles, including multi-element PCB assemblies, and dual-fed circulary polarized elements."
+            }
+        ]
+    },
+    {
+        "title": "Education",
+        "items": [
+            {
+                "title": "University of Michigan",
+                "subtitle": "Ph.D Robotics",
+                "dateStart": "Sep 2023",
+                "dateEnd": "Present",
+                "description": "Relevant Coursework: Deep Learning for Robot Perception, Advanced Computer Vision, Advanced Linear Algebra and Filtering Techniques for Robotics, Foundations of Computer Vision, Autonomous Robotics Systems Lab"
+            }, 
+            {
+                "title": "University of Michigan", 
+                "subtitle": "B.S.E Computer Engineering", 
+                "dateStart": "Sep 2019", 
+                "dateEnd": "May 2023", 
+                "description": "Magna Cum Laude, Dean's List, Honor's Program, IEEE | Relevant Coursework: Navigation and Guidance of Aerospace Vehicles, Linear Systems Theory, Autonomous Robotics, Control Systems Analysis and Design, Mechanical Dynamics, Embedded Control Systems, Advanced Embedded Systems, Embedded Systems and Design, Signals and Linear Systems, Logic Design, Differential Equations, Linear Algebra"
+            }
+        ]
+    }, 
+    {
+        "title": "Teaching", 
+        "items": [
+            {
+                "title": "ROB 599: Experimental UAS",
+                "subtitle": "Graduate Student Instructor",
+                "dateStart": "August 2024",
+                "dateEnd": "Present",
+                "description": "Experimental UAS is a graduate-level course that focuses on the design, construction, and testing of Unmanned Aerial Systems. The course covers topics such as UAS design, control, and autonomy, as well as the integration of sensors and payloads. As a GSI, I am responsible for leading lab sessions, grading assignments, and providing feedback to students."
+            }
+        ]
+    }
+]
