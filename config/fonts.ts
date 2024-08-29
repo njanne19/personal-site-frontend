@@ -12,11 +12,13 @@ export const fontMono = FontMono({
 });
 
 export const anonPro = Anonymous_Pro({
+  subsets: ["latin"],
   weight: "400",
   style: "normal",
 }); 
 
 export const anonProBold = Anonymous_Pro({
+  subsets: ["latin"],
   weight: "700",
   style: "normal",
 });
