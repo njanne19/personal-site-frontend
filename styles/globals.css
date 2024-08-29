@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.top-div-spacer { 
+    @media (min-width: 640px) {
+        height: 40vh; 
+        
+    } 
+    height: 50vh; 
+}
+
+.three-canvas-wrapper { 
+    height:100%; 
+}
