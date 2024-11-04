@@ -1,14 +1,18 @@
 import React from 'react';
 import ThreeBackground from '@/components/starCanvas';
 import XBio from '@/components/xBio';
+import HeaderMenu from '@/components/headerMenu';
 
 export default function Home() {
   return (
     <div className="relative w-full min-h-dvh">
-      <div className="absolute w-full h-full left-0 z-0 -mt-32 md:-mt-0">
+      <div className="absolute w-full h-full left-0 z-0 -mt-24 sm:-mt-0">
         <ThreeBackground />
       </div>
-      <div className="relative w-full flex flex-col items-center pb-10">
+      <div className="relative w-full flex flex-col items-center pt-10 pb-10">
+        <div className="w-full max-w-80 xs:max-w-lg sm:max-w-xl md:max-w-2xl">
+          <HeaderMenu /> 
+        </div>
         <div className="top-div-spacer" />
         <div className="relative z-10 max-w-80 xs:max-w-lg sm:max-w-xl md:max-w-2xl">
           <XBio />

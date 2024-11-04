@@ -4,11 +4,7 @@
 
 
 .top-div-spacer { 
-    @media (min-width: 640px) {
-        height: 40vh; 
-        
-    } 
-    height: 50vh; 
+    height: 40vh; 
 }
 
 .three-canvas-wrapper { 

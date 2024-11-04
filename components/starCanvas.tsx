@@ -10,7 +10,7 @@ function RotatingBlockM() {
 
     const geometry = useMemo(() => {
 
-        const geometrySimple = useLoader(STLLoader, '/blockM.stl'); 
+        const geometrySimple = useLoader(STLLoader, '/3d/blockM.stl'); 
         geometrySimple.scale(0.5, 0.5, 0.5);
 
         // Then need to subdivide the geometry to get more points
