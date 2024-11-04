@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --fore: #FFFFFF;
+    --back: #17191B;
+}
 
 .top-div-spacer { 
     height: 40vh; 
@@ -9,4 +13,8 @@
 
 .three-canvas-wrapper { 
     height:100%; 
+}
+
+.katex-display { 
+    color: var(--fore)
 }
